@@ -1,0 +1,493 @@
+body {
+     background-color: #f5f9ff;
+     /* Fondo claro */
+     color: #15297c;
+     /* Texto oscuro de la paleta */
+}
+
+header {
+     position: fixed;
+     top: 0;
+     width: 100%;
+     z-index: 1000;
+     background-color: #031926;
+     /* Fondo oscuro */
+     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+     color: #F4E9CD;
+     /* Champagne claro */
+     font-size: 2.5rem;
+     font-weight: bold;
+}
+
+h2 {
+     color: #D4A373;
+     /* Opal */
+     font-size: 2rem;
+     font-weight: bold;
+}
+
+h3 {
+     color: #77ACA2;
+     /* Green Sheen */
+     font-size: 1.75rem;
+     font-weight: bold;
+}
+
+h4 {
+     color: #468189;
+     /* Metallic Seaweed */
+     font-size: 1.5rem;
+     font-weight: bold;
+}
+
+h5 {
+     color: #031926;
+     /* Rich Black */
+     font-size: 1.25rem;
+     font-weight: normal;
+}
+
+h6 {
+     color: #031926;
+     /* Rich Black */
+     font-size: 1rem;
+     font-weight: normal;
+}
+
+.navbar {
+     background-color: transparent;
+     padding: 15px 0;
+}
+
+.logo-navbar {
+     width: 50px;
+     /* Tamaño del logo */
+     height: auto;
+     /* Mantiene la proporción */
+     border-radius: 50%;
+     /* Opcional: hacerlo circular */
+}
+
+.navbar-brand {
+     display: flex;
+     align-items: center;
+     /* Alinea el logo y el texto verticalmente */
+     color: #F4E9CD;
+     /* Texto claro */
+     font-size: 1.5rem;
+     /* Tamaño del texto del nombre */
+     font-weight: bold;
+     /* Texto en negrita */
+     text-decoration: none;
+}
+
+.navbar .navbar-brand:hover {
+     color: #9DBEBB;
+     text-decoration: none;
+}
+
+.navbar-nav .nav-link {
+     color: #F4E9CD;
+     font-size: 1rem;
+     margin-left: 15px;
+     transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+     color: #77ACA2;
+}
+
+.navbar-toggler {
+     border: 2px solid #F4E9CD;
+     /* Borde blanco */
+     background-color: transparent;
+     /* Sin fondo */
+}
+
+.navbar-toggler-icon {
+     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23F4E9CD' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba(244, 233, 205, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar .dropdown-menu {
+     background-color: #F4E9CD;
+     /* Fondo champagne */
+     border: none;
+     border-radius: 8px;
+     /* Bordes redondeados */
+     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+     /* Sombra suave */
+     padding: 10px 0;
+     /* Espaciado interno */
+     transition: opacity 0.3s ease, transform 0.3s ease;
+     /* Transición suave */
+}
+
+.navbar .dropdown-item {
+     color: #031926;
+     /* Texto oscuro */
+     padding: 10px 20px;
+     /* Espaciado interno */
+     font-size: 1rem;
+     /* Tamaño del texto */
+     transition: background-color 0.3s ease, color 0.3s ease;
+     /* Efecto hover */
+}
+
+.navbar .dropdown-item:hover {
+     background-color: #468189;
+     /* Fondo azul suave */
+     color: #F4E9CD;
+     /* Texto claro */
+     border-radius: 4px;
+     /* Bordes redondeados */
+}
+
+.section {
+     padding: 100px 20px;
+}
+
+.divider {
+     background-color: #031926;
+}
+
+.modal-body {
+     text-align: justify;
+}
+
+.modal-content {
+     background-color: #ffffff;
+     /* Fondo blanco para claridad */
+     border-radius: 10px;
+     /* Bordes redondeados */
+     box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.2);
+     /* Sombra suave */
+     border: 1px solid #e5e7eb;
+     /* Borde claro */
+     color: #1f2937;
+     /* Texto principal oscuro */
+}
+
+.modal-footer .btn {
+     font-weight: bold;
+     border-radius: 20px;
+     padding: 10px 20px;
+     transition: all 0.3s ease;
+}
+
+.modal-footer .btn-secondary {
+     background-color: #f3f4f6;
+     /* Fondo gris claro */
+     color: #1f2937;
+     /* Texto oscuro */
+     border: 1px solid #e5e7eb;
+     /* Borde claro */
+}
+
+.modal-footer .btn-secondary:hover {
+     background-color: #e5e7eb;
+     /* Más claro al pasar el mouse */
+     color: #000000;
+     /* Texto negro */
+}
+
+.modal-footer .btn-primary {
+     background-color: #2563eb;
+     /* Azul principal */
+     color: #ffffff;
+     /* Texto blanco */
+     border: none;
+}
+
+.modal-footer .btn-primary:hover {
+     background-color: #1d4ed8;
+     /* Azul más oscuro */
+     color: #ffffff;
+}
+
+/* Texto del Modal */
+.modal-body {
+     font-size: 1rem;
+     color: #4b5563;
+     /* Gris oscuro para el texto */
+     line-height: 1.6;
+     padding: 20px;
+}
+
+.parallax-section {
+     position: relative;
+     height: 100vh;
+     background-size: cover;
+     background-position: center;
+     background-attachment: fixed;
+     overflow: hidden;
+}
+
+.parallax-section::before {
+     content: "";
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     z-index: 1;
+}
+
+.parallax-section .container {
+     position: relative;
+     z-index: 2;
+}
+
+.parallax-section .content h2 {
+     font-size: 2rem;
+     font-weight: bold;
+     margin-bottom: 5px;
+     color: #FFFFFF;
+     /* Cambia el texto principal a blanco */
+}
+
+.parallax-section .content p {
+     font-size: 1rem;
+     margin: 0;
+     color: #F0F0F0;
+     /* Cambia el subtítulo a un blanco más claro */
+}
+
+.parallax-section .content {
+     text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+     /* Añade un efecto de sombra para mayor contraste */
+}
+
+.custom-carousel-control i {
+     font-size: 1rem;
+     /* Tamaño del ícono */
+     color: #FFFFFF;
+     /* Color blanco */
+     background-color: rgba(0, 0, 0, 0.5);
+     /* Fondo oscuro con opacidad */
+     border-radius: 50%;
+     /* Bordes redondeados */
+     padding: 10px;
+     /* Espaciado interno */
+     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.carousel-item img {
+     max-height: 500px;
+     object-fit: cover;
+     border-radius: 10px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+     background-color: rgba(0, 0, 0, 0.5);
+     border-radius: 50%;
+     padding: 10px;
+}
+
+
+/* .btn-success {
+     background-color: #212529;
+     color: #FFFFFF;
+     border: 2px solid #F4E9CD;
+ }*/
+/* Botón de contacto */
+.btn-whatsapp {
+     background-color: #25D366;
+     /* Verde característico de WhatsApp */
+     color: #ffffff;
+     /* Texto blanco */
+     border: 2px solid #25D366;
+     /* Borde del mismo color */
+     border-radius: 50px;
+     /* Bordes redondeados */
+     font-weight: bold;
+     display: inline-flex;
+     align-items: center;
+     justify-content: center;
+     padding: 10px 20px;
+     /* Espaciado interno */
+     font-size: 1rem;
+     text-decoration: none;
+     transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Icono dentro del botón */
+.btn-whatsapp i {
+     margin-right: 10px;
+     /* Espaciado entre el icono y el texto */
+     font-size: 1.2rem;
+     /* Tamaño del icono */
+}
+
+/* Efecto hover */
+.btn-whatsapp:hover {
+     background-color: #1ebe5b;
+     /* Verde más oscuro al pasar el mouse */
+     transform: scale(1.05);
+     /* Aumenta ligeramente el tamaño */
+     color: #ffffff;
+     /* Mantiene el texto blanco */
+}
+
+
+#quienesSomos h2 {
+     font-size: 2.5rem;
+     font-weight: bold;
+     margin-bottom: 20px;
+}
+
+#quienesSomos p {
+     font-size: 1.2rem;
+     line-height: 1.6;
+}
+
+#quienesSomos .btn:hover {
+     background-color: #1d3c44;
+}
+
+#quienesSomos img {
+     border-radius: 10px;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+     padding-top: 10px;
+}
+
+.carrusel-container {
+     max-width: 900px;
+     max-height: 500px;
+     margin: 0 auto;
+     padding: 10px;
+     overflow: visible !important; /* Permite el desbordamiento */
+     position: relative; /* Mantiene la estructura */
+     z-index: 1; /* Evita que sobresalga */
+ }
+ .carrusel-container .card:hover {
+     transform: scale(1.1); /* Hace crecer la tarjeta al pasar el mouse */
+     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Sombra más visible */
+     z-index: 10; /* La eleva por encima de otros elementos */
+ }
+ .carousel {
+     overflow: visible !important;
+ }
+
+.card {
+     background-color: #ffffff;
+     border: 1px solid #e5e7eb;
+     border-radius: 15px;
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+}
+
+.card-body img {
+     transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
+     border-radius: 8px;
+     max-height: 200px;  /* Tamaño de imagen ajustado */
+     object-fit: contain;
+}
+
+.card h5 {
+     font-size: 1.2rem;
+     font-weight: bold;
+     color: #333333;
+}
+
+.card p {
+     font-size: 0.9rem;
+     color: #666666;
+}
+
+.card i {
+     font-size: 2.5rem;
+}
+
+.hover-card:hover {
+     transform: scale(1.05);
+     /* Aumentar tamaño al pasar el mouse */
+     transition: 0.3s;
+     
+
+}
+
+.carousel-inner {
+     padding: 30px 25px;
+}
+.carousel-control-prev {
+     left: -5%;
+     /* Ajusta la posición hacia afuera del contenedor */
+}
+
+.carousel-control-next {
+     right: -5%;
+     /* Ajusta la posición hacia afuera del contenedor */
+}
+
+.hover-cato:hover {
+     background: linear-gradient(45deg, #ffd700, #00274d);
+     color: #ffffff;
+}
+
+.hover-Ucsur:hover {
+     background: linear-gradient(to bottom, #0d1b2a, #0056b3);
+     color: #ffffff;
+}
+
+.hover-Esan:hover {
+     background: linear-gradient(to bottom, #ff0000, #ffffff);
+     color: #ffffff;
+}
+
+.hover-Uss:hover {
+     background: linear-gradient(to bottom, #00FF00, #FFFFFF);
+     color: #ffffff;
+}
+
+.hover-ulima:hover {
+     background: linear-gradient(to top, #FF4500, #FFFFFF);
+     color: #ffffff;
+}
+
+.hover-upc:hover {
+     background: linear-gradient(to bottom, red, white);
+     color: #ffffff;
+}
+
+.hover-Upiura:hover {
+     background: linear-gradient(to bottom right, #002F6C, #FFFFFF);
+     color: #ffffff;
+}
+
+.hover-Upn:hover {
+     background: linear-gradient(to bottom right, #FFC107, #000000);
+     color: #ffffff;
+}
+
+.hover-Usmp:hover {
+     background: linear-gradient(to bottom right, #FFFFFF, #B22222);
+     color: #ffffff;
+}
+
+.hover-Utec:hover {
+     background: linear-gradient(to bottom, #000000, #FFFFFF, #00BFFF);
+     color: #ffffff;
+}
+
+.hover-Utp:hover {
+     background: linear-gradient(to right, #FF0000, #FFFFFF);
+     color: #ffffff;
+}
+
+.hover-Ucv:hover {
+     background: linear-gradient(to right, #FFFFFF, #FF0000);
+     color: #ffffff;
+}
+
+.hover-Untels:hover {
+     background: linear-gradient(to top, #F5A623, #FFFFFF);
+     color: #ffffff;
+}
+
+
+
