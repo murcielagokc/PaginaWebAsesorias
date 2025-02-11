@@ -9,7 +9,7 @@ header {
      position: fixed;
      top: 0;
      width: 100%;
-     z-index: 1000;
+     z-index: 3;
      background-color: #031926;
      /* Fondo oscuro */
      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -146,7 +146,8 @@ h6 {
 }
 
 .section {
-     padding: 100px 20px;
+     padding-top: 100px;
+     padding-bottom: 30px;
 }
 
 .divider {
@@ -354,11 +355,17 @@ h6 {
      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
      padding-top: 10px;
 }
-
+#Universidades {
+     height: auto !important; /* Ajusta la altura al contenido */
+     min-height: auto; /* Evita que tenga un mínimo innecesario */
+     overflow: visible; /* Asegura que todo el contenido sea visible */
+     padding-bottom: 50px; /* Espaciado en la parte inferior */
+ }
 .carrusel-container {
      max-width: 900px;
      max-height: 500px;
      margin: 0 auto;
+     margin-bottom: 30px;
      padding: 10px;
      overflow: visible !important; /* Permite el desbordamiento */
      position: relative; /* Mantiene la estructura */
@@ -455,27 +462,27 @@ h6 {
 }
 
 .hover-Upiura:hover {
-     background: linear-gradient(to bottom right, #002F6C, #FFFFFF);
+     background: linear-gradient(to top , #5290e2, #FFFFFF);
      color: #ffffff;
 }
 
 .hover-Upn:hover {
-     background: linear-gradient(to bottom right, #FFC107, #000000);
+     background: linear-gradient(to top , #FFC107, #2e2b2b);
      color: #ffffff;
 }
 
 .hover-Usmp:hover {
-     background: linear-gradient(to bottom right, #FFFFFF, #B22222);
+     background: linear-gradient(to bottom , #FFFFFF, #da5151);
      color: #ffffff;
 }
 
 .hover-Utec:hover {
-     background: linear-gradient(to bottom, #000000, #FFFFFF, #00BFFF);
+     background: linear-gradient(to bottom, #000000, #00BFFF);
      color: #ffffff;
 }
 
 .hover-Utp:hover {
-     background: linear-gradient(to right, #FF0000, #FFFFFF);
+     background: linear-gradient(to bottom, #FF0000, #FFFFFF);
      color: #ffffff;
 }
 
@@ -490,4 +497,139 @@ h6 {
 }
 
 
-
+/* Estilo del buscador */
+#buscadorUniversidad {
+     width: 70%;
+     margin: 0 auto;
+     border: 2px solid #D4A373; /* Color del borde */
+     border-radius: 20px;
+     padding: 10px 15px;
+     font-size: 1rem;
+     transition: all 0.3s ease-in-out;
+     outline: none;
+     display: block;
+ }
+ 
+ /* Efecto cuando el input está enfocado */
+ #buscadorUniversidad:focus {
+     border-color: #77ACA2; /* Cambia el color al enfocarse */
+     box-shadow: 0px 0px 10px rgba(119, 172, 162, 0.5);
+ }
+ 
+ /* Contenedor de las sugerencias */
+ #sugerencias {
+     width: 60%;
+     max-height: 200px;
+     overflow-y: auto; /* Scroll si hay muchas sugerencias */
+     border-radius: 10px;
+     background-color: #fff;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+     z-index: 2;
+ 
+     position: absolute; /* Permite que flote sin desplazar el contenido */
+     
+     left: 50%; /* Lo centra */
+     transform: translateX(-50%); 
+ }
+ 
+ /* Estilo de cada sugerencia */
+ .list-group-item {
+     cursor: pointer;
+     padding: 12px;
+     font-size: 1rem;
+     transition: all 0.3s ease-in-out;
+     background-color: white;
+     border-bottom: 1px solid #ddd; /* Línea divisoria entre sugerencias */
+ }
+ 
+ /* Cambio de color al pasar el mouse */
+ .list-group-item:hover {
+     background-color: #D4A373;
+     color: white;
+ }
+ 
+ /* Mensaje cuando no hay coincidencias */
+ .list-group-item.text-muted {
+     background-color: #f8f9fa;
+     color: #6c757d;
+     font-style: italic;
+     text-align: center;
+ }
+ 
+/* Sección Contacto */
+#contacto {
+     background-color: #F5F7FA; /* Fondo gris claro */
+     padding: 50px 0;
+ }
+ 
+/* Contenedor del Formulario */
+.formulario-container {
+     background-color: #FFFFFF; /* Blanco */
+     padding: 30px;
+     border-radius: 15px;
+     width: 100%;
+     max-width: 400px;
+     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+ }
+ 
+ /* Estilos Generales de Inputs */
+ .formulario-container label {
+     font-weight: bold;
+     color: #0D47A1;
+     display: block;
+     margin-bottom: 5px;
+ }
+ 
+ .form-control {
+     width: 100%;
+     padding: 10px;
+     border-radius: 10px;
+     border: 2px solid #0D47A1;
+     font-size: 16px;
+ }
+ 
+ /* Botón */
+ .btn-enviar {
+     width: 100%;
+     background-color: #031926; /* Azul oscuro */
+     color: white;
+     padding: 10px;
+     font-size: 18px;
+     font-weight: bold;
+     border-radius: 10px;
+     border: none;
+     cursor: pointer;
+ }
+ 
+ .btn-enviar:hover {
+     background-color: #08306b;
+ }
+ 
+ 
+ .btn-enviar:hover {
+     background-color: #08306b;
+ }
+ 
+ /* Información de Contacto */
+ .info-contacto {
+     background-color: white;
+     padding: 20px;
+     border-radius: 10px;
+ }
+ 
+ .info-contacto h2 {
+     color: #0D47A1;
+ }
+ 
+ .info-contacto ul {
+     list-style: none;
+     padding: 0;
+ }
+ 
+ .info-contacto li {
+     font-size: 16px;
+     color: #333;
+     margin-bottom: 8px;
+ }
+ 
+ 
