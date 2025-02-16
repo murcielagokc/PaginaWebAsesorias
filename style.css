@@ -380,6 +380,8 @@ h6 {
      overflow: visible !important;
  }
 
+ 
+
 .card {
      background-color: #ffffff;
      border: 1px solid #e5e7eb;
@@ -632,4 +634,13 @@ h6 {
      margin-bottom: 8px;
  }
  
+ .social-icon {
+     width: 80px;
+     height: 80px;
+     transition: transform 0.3s, background-color 0.3s;
+ }
  
+ .social-icon:hover {
+     transform: scale(1.1);
+     background-color: #b5d9e3; /* Un color de la paleta para resaltar */
+ }

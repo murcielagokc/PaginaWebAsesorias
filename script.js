@@ -55,4 +55,23 @@ function abrirModal(modalID) {
     modal.show();
 }
 
+document.getElementById("contactForm").addEventListener("submit", function(event){
+    event.preventDefault(); // Evita que la página se recargue
 
+    let form = event.target;
+    let formData = new FormData(form);
+
+    fetch("https://formsubmit.co/murcielago38022@gmail.com", { 
+        method: "POST",
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            document.getElementById("successMessage").style.display = "block"; // Muestra mensaje de éxito
+            form.reset(); // Limpia el formulario
+        } else {
+            alert("Hubo un problema al enviar el mensaje.");
+        }
+    })
+    .catch(error => console.error("Error:", error));
+});
