@@ -61,17 +61,18 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     let form = event.target;
     let formData = new FormData(form);
 
-    fetch("https://formsubmit.co/murcielago38022@gmail.com", { 
+    fetch(form.action, { // Usa la acción del formulario (FormSubmit API)
         method: "POST",
         body: formData
     })
     .then(response => {
         if (response.ok) {
-            document.getElementById("successMessage").style.display = "block"; // Muestra mensaje de éxito
-            form.reset(); // Limpia el formulario
+            document.getElementById("successMessage").style.display = "block"; // Muestra el mensaje de éxito
+            form.reset(); // Limpia el formulario después de enviar
         } else {
             alert("Hubo un problema al enviar el mensaje.");
         }
     })
     .catch(error => console.error("Error:", error));
 });
+
